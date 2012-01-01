@@ -1,0 +1,11 @@
+
+* Parallel thrush
+
+  Performs the same function as the "thrush" macro (written ->> in
+  Clojure), with the added feature that some sections are run in
+  parallel. 
+  
+* License
+
+  Copyright (C) 2011, Chris Gray.  Distributed under the EPL, with the
+  same terms as Clojure.
