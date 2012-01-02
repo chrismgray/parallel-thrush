@@ -1,6 +1,6 @@
 (ns parallel-thrush.core)
 
-(defn- pmapcat
+(defn pmapcat
   "mapcat meets pmap"
   [f coll]
   (apply concat (pmap f coll)))
@@ -72,7 +72,8 @@
            (for [[ops body] bodies]
              (if (= (last ops) :split)
                `((partition ~*parallel-thrush-partition-size* ~*parallel-thrush-partition-size* [])
-                 (pmapcat (fn [x#]
-                             (->> x# ~@body))))
+                 (parallel-thrush.core/pmapcat
+                  (fn [x#]
+                    (->> x# ~@body))))
                `~body)))))
 
