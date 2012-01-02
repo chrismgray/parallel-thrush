@@ -3,9 +3,10 @@
 
   Performs the same function as the "thrush" macro (written ->> in
   Clojure), with the added feature that some sections are run in
-  parallel. 
+  parallel.  The main macro is named =||->>=.  See its docstring for
+  full documentation.
   
 * License
 
-  Copyright (C) 2011, Chris Gray.  Distributed under the EPL, with the
+  Copyright (C) 2012, Chris Gray.  Distributed under the EPL, with the
   same terms as Clojure.
